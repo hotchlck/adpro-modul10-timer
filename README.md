@@ -11,7 +11,7 @@ Meanwhile, the code ```println!("Salma's Computer: howdy!")``` and ```println!("
 ***With drop command***
 <img src = "img/howdy2.png">
 
-***Without drom command***
+***Without drop command***
 <img src = "img/howdy2.png">
 
 Based on the image, multiple tasks are concurrently spawned, leading to asynchronous and independent execution with an unpredictable sequence. Regardless of the task order, the output is consistently printed after the 'Guten Morgen Meine Freunde' in the main thread. However, without the 'drop' command, the program runs indefinitely as the executor, unaware of task completion, awaits further tasks. Thus, the 'drop' command is essential to signal task completion and ensure program termination.
